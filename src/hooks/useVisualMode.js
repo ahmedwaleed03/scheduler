@@ -15,9 +15,9 @@ export default function useVisualMode(initial, replace = false) {
 
   function back() {
     if (history.length > 1) {
-      setHistory(prev => [...prev.slice(0, prev.length -1)]);
+      setHistory(prev => [...prev.slice(0, prev.length - 1)]);
     }
   };
 
-  return { mode: history[history.length -1], transition, back };
+  return { mode: history[history.length - 1], transition, back };
 }
